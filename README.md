@@ -1,47 +1,55 @@
-# Astro Starter Kit: Minimal
+# [DISPATCH]
 
-```sh
-npm create astro@latest -- --template minimal
-```
+— is a— super clean template for a subscription-based development studio.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Features
+- Ready-to-go web-template made with [Astro](https://astro.build);
+- Distinctive typography — [Monaspace Neon](https://monaspace.githubnext.com/);
+- Sustainable code and design;
+- Comes with the `site.js` — a single source of truth to update content, and don't waste any time jumping between files;
+- Includes 7 sections: main, subscription description, services, about, FAQ, benefits, contact;
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Cover](/public/images/cover.webp)
 
-## 🚀 Project Structure
+## Scores
+- [100 Performance according to PageInsights](https://pagespeed.web.dev/analysis/https-dispatch-omega-vercel-app/t6h6euey6v?form_factor=desktop);
+- [A+ DigitalBeacon Carbon FootPrint Score](https://digitalbeacon.co/report/dispatch-omega-vercel-app);
+- [A+ 95 Website Carbon Calculator Score](https://www.websitecarbon.com/website/dispatch-omega-vercel-app/);
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
+## Structure
+```plaintext
 /
 ├── public/
+│   ├── css/
+│   │   └── global.css
+│   ├── favicon.svg
+│   ├── fonts/
+│   │   └── MonaspaceNeonVarVF.ttf
+│   └── images/
+│       ├── article.webp
+│       └── cover.webp
 ├── src/
+│   ├── components/
+│   │   ├── About.astro
+│   │   ├── Benefits.astro
+│   │   ├── Contact.astro
+│   │   ├── FAQ.astro
+│   │   ├── Header.astro
+│   │   ├── Navigation.astro
+│   │   ├── Package.astro
+│   │   ├── SectionTitle.astro
+│   │   ├── Services.astro
+│   │   └── Subscription.astro
+│   ├── layouts/
+│   │   └── Layout.astro
 │   └── pages/
-│       └── index.astro
+│   │   └── index.astro
+│   └── site.js
 └── package.json
 ```
+## Customization and Development
+To change the contents of the websise, update the `src/site.js` file — it's the easiest way. 
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+In case you want to change styles, colors, fonts — have a look at `public/global.css` file.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+![FAQ Preview](/public/images/article.webp)
