@@ -1,0 +1,280 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --light: #d49c78;
+  --dark: #1c273b;
+  --neutral: #666666;
+
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.875rem;
+  --font-size-m: 1rem;
+
+  --padding-button: 0.25rem 0.8rem;
+
+  --letter-spacing-breathe: 0.02rem;
+}
+
+@font-face {
+  font-family: "MonaspaceNeon";
+  src: url("/fonts/MonaspaceNeonVarVF.ttf");
+}
+
+html {
+  background: var(--dark);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  gap: 12rem;
+  font-family: "MonaspaceNeon";
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 40rem;
+  margin: auto;
+  padding: 8rem 0rem;
+  font-weight: 300;
+}
+
+main {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+article {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+section {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+div:not(.package-header, nav div) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 40rem;
+  margin: auto;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0;
+  background: var(--dark);
+  font-size: var(--font-size-s);
+
+  div {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  a {
+    border: none;
+    font-size: var(--font-size-s) !important;
+    text-decoration: none;
+    width: fit-content !important;
+    display: flex;
+    padding: var(--padding-button) !important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    font-size: var(--font-size-m);
+    letter-spacing: var(--letter-spacing-breathe);
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none !important;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+summary {
+  color: var(--light);
+}
+
+h1,
+h2 {
+  text-transform: lowercase;
+  font-size: var(--font-size-m);
+}
+
+h1 {
+  color: var(--light);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h1 {
+    &:after {
+      content: "]";
+    }
+
+    &:before {
+      content: "[";
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+a {
+  color: var(--light);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h2 {
+  &:before {
+    content: "~/";
+  }
+}
+
+.primary {
+  color: var(--dark);
+  background: var(--light);
+
+  &:hover {
+    background: none;
+    color: var(--light);
+  }
+}
+
+.secondary {
+  color: var(--light);
+  background: none;
+
+  &:hover {
+    background: var(--light);
+    color: var(--dark);
+  }
+}
+
+ul {
+  list-style-type: "+ ";
+  list-style-position: inside;
+}
+
+.details {
+  font-size: var(--font-size-s);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  ul {
+    li {
+      color: var(--neutral);
+    }
+  }
+}
+
+li {
+  &:after {
+    content: ";";
+  }
+}
+
+.package-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.package-header-spot {
+  color: var(--neutral);
+}
+
+details {
+  p {
+    padding: 1rem;
+    margin-top: 1rem;
+    background: var(--light);
+    color: var(--dark);
+  }
+}
+
+.border {
+  background-color: var(--light);
+  padding-top: 0px;
+  height: 4px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  display: block;
+  color: inherit;
+}
+
+.gradient {
+  background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 8px,
+      var(--light) 8px,
+      var(--light) 10px);
+  padding-top: 0px;
+  aspect-ratio: 24 / 1;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  display: block;
+  color: inherit;
+}
+
+@media (max-width: 640px) {
+
+  body,
+  nav {
+    padding: 2rem 1rem !important;
+  }
+}
+
+@media (min-width: 640) {
+  body {
+    margin: 0 4rem;
+  }
+
+  body,
+  nav {
+    padding: 0;
+  }
+}

@@ -1,0 +1,16 @@
+---
+import { site } from "../site.js"
+import Package from "../components/Package.astro"
+import SectionTitle from "./SectionTitle.astro"
+
+const s = site.subscription
+---
+<section>
+	<SectionTitle title="Subscription" />
+	<Package price={s.price} spots={s.spots} description={s.description} benefits={s.benefits} />
+
+			<p>
+				If your project doesn't fit into the monthly plan, or you just
+				want to work a little different, let's talk.
+			</p>
+</section>

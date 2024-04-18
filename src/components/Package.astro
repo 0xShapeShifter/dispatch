@@ -1,0 +1,32 @@
+---
+
+const { price, spots, description, benefits } = Astro.props
+---
+<div>
+	<div class="package-header">
+{
+
+		price && <p>
+{ price && <span class="package-header-price">{price.toLocaleString('en-US', {style: 'currency', currency: 'USD'}).split(".")[0]} per month</span> }
+		{ spots &&	<span class="package-header-spot">({spots > 1 ? spots + " spots" : spots + " spot"} left)</span> }
+		</p>}
+
+</div>
+
+	<div>
+	<p>{description}</p>
+	</div>
+
+{ benefits && 
+	<div>
+		<p>You get:</p>
+			<ul>
+{
+      benefits?.map((b) => (
+      <li>{b}</li>
+      ))
+      }
+			</ul>
+	</div>
+	}
+</div>

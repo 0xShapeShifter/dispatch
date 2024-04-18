@@ -1,0 +1,15 @@
+---
+import { site } from "../site";
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<section>
+    <div>
+        <SectionTitle title="Services" />
+    <ul>
+{ site.services?.map((s) => (
+            <li>{s}</li>
+            ))}
+    </ul>
+    </div>
+</section>

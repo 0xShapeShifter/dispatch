@@ -1,0 +1,16 @@
+---
+import { site } from "../site";
+import SectionTitle from "./SectionTitle.astro";
+---
+<section>
+  <div>
+    <SectionTitle title="Contact"/>
+    <ul>
+{
+      site.contacts.map((c) => (
+      <li><a href={c.href} target="_blank">{c.title}</a></li>
+      ))
+      }
+    </ul>
+  </div>
+</section>
